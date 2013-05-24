@@ -1,0 +1,17 @@
+<head>
+  <title>Test</title>
+</head>
+<body>
+  {{> searchbox}}
+</body>
+
+<template name="searchbox">
+  <p class="links">People starting with: <a href="">A</a> | <a href="">B</a> | <a href="">C</a>
+  {{#each contacts}}
+    {{> contactItem}}
+  {{/each}}
+</template>
+
+<template name="contactItem">
+  <p>{{firstName}} {{lastName}}</p>
+</template>
